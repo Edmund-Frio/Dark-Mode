@@ -2,11 +2,23 @@
   font-family: monospace;
 }
 
+:root {
+  --light: #d4cec4;
+  --dark: #090614;
+  --lightBtn: #f1f1f1;
+  --darkBtn: #110b27;
+}
+
 body {
-  background-color: #d4cec4;
+  background-color: var(--light);
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+body.dark-mode {
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 #container {
@@ -16,9 +28,25 @@ body {
   height: 100%;
 }
 
-#color-btn {
-  height: 30px;
-  width: 150px;
-  font-size: 20px;
+.toggle-btn {
+  height: 80px;
+  width: 200px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--lightBtn);
+  color: var(--darkBtn);
+  font-size: 30px;
   cursor: pointer;
+}
+
+.toggle-btn.dark-mode {
+  background-color: #110b27;
+  color: var(--light);
+}
+
+#next-project {
+  display: none;
+  height: 5rem;
+  width: 2rem;
+  background-color: blue;
 }
