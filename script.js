@@ -13,14 +13,4 @@ function toggleDarkMode() {
     toggleBtn.innerHTML = "Light Mode";
     githubLink.style.color = "#090614";
   }
-
-  toggleBtn.addEventListener("click", () => {
-    let randY = Math.floor((Math.random() * 400));
-    let randX = Math.floor((Math.random() * 400));
-    backgroundColor.style.transform = `translate(${randX}px, ${randY}px)`;
-  
-    backgroundColor.appendChild(cloneDark);
-  })
-  
-
 }
