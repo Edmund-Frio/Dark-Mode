@@ -14,6 +14,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  transition: 0.4s;
 }
 
 body.dark-mode {
@@ -25,6 +26,8 @@ body.dark-mode {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20px;
   height: 100%;
 }
 
@@ -39,14 +42,19 @@ body.dark-mode {
   cursor: pointer;
 }
 
+.toggle-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+
 .toggle-btn.dark-mode {
   background-color: #110b27;
   color: var(--light);
 }
 
-#next-project {
-  display: none;
-  height: 5rem;
-  width: 2rem;
-  background-color: blue;
+.toggle-btn.toggle-btn.dark-mode:hover {
+  box-shadow: rgba(109, 109, 109, 0.3) 0px 4px 12px;
+}
+
+.link {
+  color: var(--dark);
 }
